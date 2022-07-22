@@ -10,8 +10,7 @@ let
 function quoteG() {
   quoteBtn.classList.add("loading");
   quoteBtn.innerText = "Loading...";
-  fetch("http://api.quotable.io/random").then(res => res.json()).then(result => {
-    console.log(result)
+  fetch("http://www.api.quotable.io/random").then(res => res.json()).then(result => {
     quoteContent.innerText = result.content;
     quoteAuthor.innerText = `- ${result.author}`;
     quoteBtn.classList.remove("loading");
